@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Financial Dashboard</h1>
+        </header>
+        <main>
+            <section id="expense-tracker">
+                <h2>Expense Tracker</h2>
+                <form id="expense-form">
+                    <input type="text" id="expense-description" placeholder="Description" required>
+                    <input type="number" id="expense-amount" placeholder="Amount" required>
+                    <select id="expense-category" required>
+                        <option value="">Select category</option>
+                        <option value="food">Food</option>
+                        <option value="transportation">Transportation</option>
+                        <option value="entertainment">Entertainment</option>
+                        <option value="utilities">Utilities</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <button type="submit">Add Expense</button>
+                </form>
+                <ul id="expense-list"></ul>
+            </section>
+            <section id="spending-chart">
+                <h2>Spending by Category</h2>
+                <canvas id="pie-chart"></canvas>
+            </section>
+            <section id="budget-manager">
+                <h2>Budget Manager</h2>
+                <form id="budget-form">
+                    <input type="number" id="budget-amount" placeholder="Set budget" required>
+                    <button type="submit">Update Budget</button>
+                </form>
+                <div id="budget-info"></div>
+                <div id="budget-progress"></div>
+            </section>
+            <section id="recent-transactions">
+                <h2>Recent Transactions</h2>
+                <ul id="transactions-list"></ul>
+            </section>
+            <section id="savings-goal">
+                <h2>Savings Goal</h2>
+                <form id="savings-form">
+                    <input type="number" id="savings-amount" placeholder="Set savings goal" required>
+                    <button type="submit">Update Goal</button>
+                </form>
+                <div id="savings-info"></div>
+                <div id="savings-progress"></div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
